@@ -1,0 +1,10 @@
+    /* Example */
+    .scrollbar-thin {
+        scrollbar-width: thin;
+    }
+    .scrollbar-thumb-blue {
+        scrollbar-thumb: bg-blue-500;
+    }
+    .scrollbar-track-gray {
+        scrollbar-track: bg-gray-100;
+    }
