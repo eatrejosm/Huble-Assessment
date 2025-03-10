@@ -18,12 +18,6 @@ Optional:
 
 ---
 
-## 📂 Project Structure
-
-my-react-app/ ├── frontend/ │ ├── src/ │ │ ├── assets/ # Static assets (e.g., images) │ │ ├── components/ # Reusable UI components (e.g., ReviewCard, Modal) │ │ ├── lib/ # Helper functions/utilities │ │ ├── App.jsx # Main App component │ │ └── index.jsx # Entry point for the application │ ├── public/ # Public files (e.g., index.html) │ └── tailwind.config.js # TailwindCSS configuration │ └── server/ ├── server.js # Backend API (Express server) ├── reviews.json # Mock reviews data └── package.json # Backend dependencies
-
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend**:
@@ -49,25 +43,25 @@ Follow these steps to get the project up and running:
 
 ### Frontend Setup
 
-#### 1. Navigate to the frontend directory
+#### Navigate to the frontend directory
 
 ```bash
 cd frontend
 ```
 
-#### 2.Install dependencies
+#### Install dependencies
 
 ```bash
 npm install
 ```
 
-#### 3.Run the development server
+#### Run the development server
 
 ```bash
 npm run dev
 ```
 
-#### 4.Open your browser and navigate to
+#### Open your browser and navigate to
 
 ```bash
 http://localhost:5173
@@ -75,25 +69,25 @@ http://localhost:5173
 
 ### Backend Setup
 
-#### 1.Navigate to the server directory
+#### Navigate to the server directory
 
 ```bash
 cd backend
 ```
 
-#### 2.Install dependences
+#### Install dependences
 
 ```bash
 npm install
 ```
 
-#### 3.Start the backend server
+#### Start the backend server
 
 ```bash
 node server.js
 ```
 
-#### 4.The backend will run on
+#### The backend will run on
 
 ```bash
 http://localhost:5000
@@ -101,21 +95,21 @@ http://localhost:5000
 
 ## 🚦 Usage
 
-#### 1.View dynamic reviews fetched from the JSON file or RESTful API
+#### 1. View dynamic reviews fetched from the JSON file or RESTful API
 
-#### 2.Submit new reviews using the form
+#### 2. Submit new reviews using the form
 
-#### 3.Enjoy the responsive and accessible user interface
+#### 3. Enjoy the responsive and accessible user interface
 
 ## 📋 Evaluation Criteria
 
-#### 1.Code Quality: Modular, readable, and well-commented code structure
+#### 1. Code Quality: Modular, readable, and well-commented code structure
 
-#### 2.Responsiveness: Optimized for mobile-first design and scales on all devices
+#### 2. Responsiveness: Optimized for mobile-first design and scales on all devices
 
-#### 3.Accessibility: Meets WCAG AA compliance
+#### 3. Accessibility: Meets WCAG AA compliance
 
-#### 4.Modern Practices: Adopts hooks, lightweight state management, and best practices in React
+#### 4. Modern Practices: Adopts hooks, lightweight state management, and best practices in React
 
 ## 🤝 Contributing
 
