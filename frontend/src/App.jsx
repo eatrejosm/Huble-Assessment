@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import ReviewSection from "./components/ReviewSection";
 import Footer from "./components/Footer";
 import "./index.css";
 import "./App.css";
