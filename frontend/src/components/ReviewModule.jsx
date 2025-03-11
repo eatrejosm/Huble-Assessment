@@ -72,7 +72,7 @@ const ReviewModule = () => {
   };
 
   return (
-    <div className="p-4 container mx-auto">
+    <div className="p-4 container mx-auto" role="region" aria-label="Customer Reviews Section">
       <h3 className="text-2xl font-bold m-8 yb-4 text-center">Customer Reviews</h3>
 
       {/* Show Reviews */}
@@ -94,6 +94,8 @@ const ReviewModule = () => {
               <div
                 key={index}
                 className="p-0 border rounded-lg shadow-md flex flex-col h-96 overflow-hidden"
+                role="reviewcard"
+                aria-label={`Review by ${review.name}`}
               >
                 <h4 className="font-bold text-lg bg-blue-500 p-6 text-center">{review.name}</h4>
                 <span className="text-md text-gray-500 mt-5 py-1 px-5 bg-grey-500">{review.email}</span>
@@ -104,25 +106,29 @@ const ReviewModule = () => {
                     day: "numeric",
                   })}
                 </span>
-                <div className="flex justify-center">
+                <div className="flex justify-center" aria-label={`Rating: ${review.rating} out of 5`}>
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span
                       key={i}
                       className={`text-5xl ${
                         i < review.rating ? "text-yellow-400" : "text-gray-300"
                       }`}
+                      aria-label={`Star ${i + 1}`}
                     >
                       ✭
                     </span>
                   ))}
                 </div>
                 <p className="overflow-auto px-5 mt-2 scrollbar-thin">
-                  <p className="break-words">{truncatedComment}</p>
+                  <p className="break-words" aria-label={`Comment by ${review.name}`}>{truncatedComment}</p>
                   {review.comment.length > maxCharLimit && (
                     <div className="flex justify-end">
                       <button
                         onClick={() => toggleExpand(index)}
                         className="text-blue-500 hover:underline self-start flex pb-2"
+                        name="read"
+                        id="read"
+                        aria-expanded={isExpanded}
                       >
                         {isExpanded ? "Read less" : "Read more"}
                       </button>
@@ -133,7 +139,7 @@ const ReviewModule = () => {
             );
           })
         ) : (
-          <p className="text-center">No reviews available.</p>
+          <p className="text-center" role="status">No reviews available.</p>
         )}
       </div>
 
@@ -151,6 +157,7 @@ const ReviewModule = () => {
               <input
                 type="text"
                 name="name"
+                id="name"
                 placeholder="Your Name"
                 maxLength={20}
                 minLength={5}
@@ -162,6 +169,7 @@ const ReviewModule = () => {
               <input
                 type="email"
                 name="email"
+                id="email"
                 placeholder="Your Email"
                 maxLength={30}
                 minLength={5}
@@ -171,7 +179,7 @@ const ReviewModule = () => {
                 required
               />
               <div className="mb-4">
-                <label className="block mb-2">Rating:</label>
+                <label for="rating" className="block mb-2">Rating:</label>
                 <div className="flex">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span
@@ -193,6 +201,7 @@ const ReviewModule = () => {
               <div>
                 <textarea
                   name="comment"
+                  id="comment"
                   placeholder="Your Comment"
                   maxLength={3000}
                   minLength={10}
@@ -204,11 +213,11 @@ const ReviewModule = () => {
                 <p className="text-sm p-0 mb-4 mr-3 text-right">min:10, max:3000 letters</p>
               </div>
               <div className="flex justify-end">
-                <Button onClick={() => setIsVisible(false)} className="mr-2 bg-red-500">
-                  Cancel
-                </Button>
-                <Button type="submit" className="bg-green-500">
+                <Button type="submit" className="mr-2 bg-green-500" id="submit_btn" name="submit_btn">
                   Submit
+                </Button>
+                <Button onClick={() => setIsVisible(false)} className="bg-red-500" id="cancel" name="cancel_btn">
+                  Cancel
                 </Button>
               </div>
             </form>
