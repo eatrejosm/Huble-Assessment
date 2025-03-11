@@ -96,19 +96,19 @@ http://localhost:5000
 
 ## 🚦 Usage
 
-### 1. View dynamic reviews fetched from the JSON file or RESTful API
+#### 1. View dynamic reviews fetched from the JSON file or RESTful API
 
-### 2. Submit new reviews using the form
+#### 2. Submit new reviews using the form
 
-### 3. Enjoy the responsive and accessible user interface
+#### 3. Enjoy the responsive and accessible user interface
 
 ## 📋 Evaluation Criteria
 
-### 1. Code Quality: Modular, readable, and well-commented code structure
+#### 1. Code Quality: Modular, readable, and well-commented code structure
 
-### 2. Responsiveness: Optimized for mobile-first design and scales on all devices
+#### 2. Responsiveness: Optimized for mobile-first design and scales on all devices
 
-### 3. Accessibility: Meets WCAG AA compliance
+#### 3. Accessibility: Meets WCAG AA compliance
 
 - **Semantic HTML**: Proper use of `<header>`, `<main>`, `<button>`, and `<form>` for better screen reader support.  
 - **Keyboard Navigation**: All interactive elements are accessible via keyboard navigation.  
@@ -117,7 +117,7 @@ http://localhost:5000
 - **Focus Management**: Ensures correct focus handling for smooth navigation, even in dynamic content updates.  
 - **Error Messaging**: Clear, accessible error validation using `aria-describedby` for form inputs.  
 
-### 4. Modern Practices: Adopts hooks, lightweight state management, and best practices in React
+#### 4. Modern Practices: Adopts hooks, lightweight state management, and best practices in React
 
 ## 🤝 Contributing
 
